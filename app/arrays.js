@@ -25,9 +25,11 @@ define(function() {
     },
 
     remove : function(arr, item) {
-      for (var i = 0; i < arr.length; i ++) {
-
+      while (arr.indexOf(item) != -1) {
+        console.log(arr.indexOf(item));
+        arr.splice(arr.indexOf(item), 1);
       }
+      return arr;
     },
 
     removeWithoutCopy : function(arr, item) {
